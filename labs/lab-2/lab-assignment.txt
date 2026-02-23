@@ -1,0 +1,17 @@
+In this lab assignment, you are required to further in-depth your research topic.
+Please refer to Lecture #2 (and recording) to review the steps to follow. Then
+answer the following questions:
+
+1. Read the selected 15-20 papers. Only read the abstract, introduction, and
+   conclusion in detail (you may skim the rest of the paper for a general idea).
+
+2. Answer the following questions for each paper:
+   a. Which problem it addresses
+   b. What solution it proposes
+   c. How the solution differs from previous solutions
+   d. What are the main contributions and conclusions
+
+3. Out of these 15-20 papers, and based on your reading and understanding, pick
+   a list of 4-6 papers that you think are the highest quality and that address
+   your research interests and the challenges in the field most appropriately.
+   Mention the full citation details of these 4-6 papers.
