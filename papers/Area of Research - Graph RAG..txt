@@ -1,0 +1,74 @@
+Area of Research - Graph RAG. 
+-----------------------------
+I want to learn graphs , and RAG knowledgebases in depth.
+I feel it will stand to me in the current agentic industry uprising.
+There's too much red tape around getting data for a networks with NDA's etc. 
+
+
+Keywords
+---------------------------
+RAG Retrieval augmented generation Graph Knowledge KG
+
+
+Papers
+--------------------------
+1 - 
+	Name: From Local to Global: A GraphRAG Approach to Query-Focused Summarization
+	Link: https://arxiv.org/pdf/2404.16130
+
+2 - 
+	Name: Unifying Large Language Models and Knowledge Graphs: A Roadmap
+	Link: https://ieeexplore-ieee-org.mtu.idm.oclc.org/document/10387715
+
+3 -
+	Name: Graph Retrieval-Augmented Generation: A Survey
+	Link: https://dl-acm-org.mtu.idm.oclc.org/doi/10.1145/3777378
+
+4 - 
+	Name: Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks
+	Link: https://arxiv.org/abs/2005.11401 
+
+5 - 
+	Name: RAKG:Document-level Retrieval Augmented Knowledge Graph Construction
+	Link: https://arxiv.org/abs/2504.09823
+
+6 - 
+	Name: LLM-empowered knowledge graph construction: A survey
+	Link: https://arxiv.org/abs/2510.20345
+
+7 -
+	Name: KGGen: Extracting Knowledge Graphs from Plain Text with Language Models
+	Link: https://arxiv.org/pdf/2502.09956
+
+8 - 
+	Name: LLMs for Knowledge Graph Construction and Reasoning: Recent Capabilities and Future Opportunities
+	Link: https://arxiv.org/abs/2305.13168
+
+9 -
+	Name: An Adaptive Framework Embedded With LLM for Knowledge Graph Construction
+	Link: https://ieeexplore-ieee-org.mtu.idm.oclc.org/document/10948338  
+
+10 - 
+	Name: Knowledge Graph-extended Retrieval Augmented Generation for Question Answering
+	Link: https://arxiv.org/pdf/2504.08893
+
+11 -   
+	Name: Retrieval-Augmented Generation with Knowledge Graphs for Customer Service Question Answering
+	Link: https://dl-acm-org.mtu.idm.oclc.org/doi/10.1145/3626772.3661370
+
+12 - 
+	Name: Towards Practical GraphRAG: Efficient Knowledge Graph Construction and Hybrid Retrieval at Scale
+	Link: https://arxiv.org/abs/2507.03226
+
+13 - 
+	Name: Document Knowledge Graph to Enhance Question Answering with Retrieval Augmented Generation
+	Link: https://ieeexplore.ieee.org/document/10711054
+
+14 - 
+	Name: Attention Is All You Need
+	Link: https://arxiv.org/pdf/1706.03762
+
+15 - 
+	Name: Combining LLMs and Knowledge Graphs to Reduce Hallucinations in Question Answering
+	Link: https://arxiv.org/abs/2409.04181
+
