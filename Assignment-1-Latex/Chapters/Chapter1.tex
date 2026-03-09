@@ -1,51 +1,12 @@
-\chapter{Introduction}
-\label{chap:intro}
-\lhead{\emph{Introduction}}
+\chapter{Research Context}
 
+With the widespread adoption of large language models (LLMs), whose knowledge is limited to the parametric memory encoded during training, Retrieval-Augmented Generation (RAG)~\cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp} has emerged as the predominant approach in enriching model outputs with non-parametric memory from external  sources. Vector RAG encodes documents as chunks in the form of embeddings and retrieves the top k documents via semantic similarity given a query and adds them as context to the LLM for generation. 
 
-\section{Research Context}
+While vector RAG achieved state of the art performance in query focused summarization (QFS), Edge et al.~\cite{edge2025localglobalgraphrag} highlighted that it falls short when it comes to global or sense making queries like 'what are the main themes in this dataset?'. They proposed GraphRag as a solution to this problem. GraphRag adopts a graph-based approach to question answering. An LLM is first used to extract entities and relationships from source documents and construct a knowledge graph. Communities are then identified within the graph and summarised, enabling the system to answer global queries. However, GraphRAG has its own limitations. Graph construction introduces an expensive upfront cost, and for simple query-focused summarisation, vector RAG is far more efficient.
 
-\subsection{Background}
-\subsection{Teory}
-\subsubsection{Related Work}
+This highlights the need for adopting hybrid approaches to extending an LLM's knowledge. LinkedIn verfied this by deploying a hybrid model to production for six months. This hybrid approach was shown to reduce the median per-issue resolution time by 28.6\% ~\cite{Xu_2024}. 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\linewidth]{Figures/successkid.jpg}
-    \caption{My first figure}
-    \label{fig:placeholder}
-\end{figure}
+Cover adaptoive rah here as a sort of relative work
 
-\section{Research Aim}
-blah bna;l~\cite{edge2025localglobalgraphrag}
+my novel idea/ contribution.
 
-\begin{table}
-    \centering
-    \begin{tabular}{|c|c|}
-        \hline
-        \textbf{Objective} & \textbf{Description} \\
-        \hline
-        Objective 1 & Description of objective 1 \\
-        Objective 2 & Description of objective 2 \\
-        Objective 3 & Description of objective 3 \\
-        \hline
-    \end{tabular}
-    \caption{Research Objectives}
-    \label{tab:objectives}
-\end{table}
-
-
-\section{Research Objects}
-
-This chapter should provide background description for your project. This chapter should comprise around 1000 words. Here you are setting the scene, remember the reader may know little about your project at this stage (other than the abstract). N.B. The chapter sections outlined in this document are suggested, some projects will have a greater or lesser emphasis on different sections or may change titles and some will have to add other sections to provide context or detail.
-% Putting in comments within the TeX file can be really useful in making notes for yourself and dumping text that you intend to edit later
-
-\section{Motivation}
-Provide motivation for reading the report. Why is it important to do a project on this topic? This should cover your key motivation for this. This section can include the personal pronoun but \textbf{the rest of the report should be third person passive}, this is the case with most technical reports! For example here it is fine to say "... I decided to develop and app to help ...".
-
-\section{Contribution}
-Specify the problem clearly. List your project goals and research questions here. Enumerate the main contributions. How have you advanced the state of the art i.e what have you done that is new?
-
-\section{Structure of This Document}
-% notice how I cross referenced the chapters through using the \label tag --> LaTeX is VERY similar to HTML and other mark up languages so you should see nothing new here!
-Introduce the structure of your report. This section is quite formulaic. Briefly describe the structure of this document, enumerating what does each chapter and section stands for. For instance in this work in Chapter \ref{chap:litreview} the guidance in structuring the literature review is given. Chapter \ref{chap:design} describes the main requirements for the problem definition and so on ...

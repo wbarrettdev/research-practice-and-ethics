@@ -202,17 +202,6 @@ create a proven working in production system that has improved efficiency. not j
 # 12 - Towards Practical GraphRAG: Efficient Knowledge Graph Construction and Hybrid Retrieval at Scale (July 2025)
 
 ### Which problem it addresses
-Cost effective approach to deploying graph rag in enterprise.
-### What solution it proposes
-1 - knowlege graph construction pipeline that uses dependency parsing to to achieve 94% of llm based performance.
-2 - a hybrid retrival that fusies vector similarity with graph traveersal.
-### How the solution differs from previous solutions
-
-### What are the main contributions and conclusions
-
-# 13 - Document Knowledge Graph to Enhance Question Answering with Retrieval Augmented Generation (Seot 2024)
-
-### Which problem it addresses
 enterprise deployment of knowledge graphs have two problems. 
 1 - knowlege graph construction ios expensive. 
 2 graph retireval is too slow. 
@@ -226,6 +215,30 @@ hybrid merging of 50/50- grapoh and rag
 - hybrid retrieval combining rag and Graphrag. 
 - applied to legacy code migration
 - more cost effective approach to enterprise adopption.
+
+### What are the main contributions and conclusions
+
+# 13 - Document Knowledge Graph to Enhance Question Answering with Retrieval Augmented Generation (Seot 2024)
+
+### Which problem it addresses
+- vector based rag only retrieves text chunks from a vector database. 
+- it cant answer questions that go beyond the text content like metadata or relationships between documents. 
+- as the number of documents grows this becomes a bigger problem.
+
+### What solution it proposes
+- a Document Knowlege Graph (DKG) built from document structures to extend rag. 
+the KG manages document hierarchy and metadata alongside the vector database. 
+- the two databases are linked so the DKG can enrich what the vector search finds.
+
+### How the solution differs from previous solutions
+- uses a structural/metadata graph rather than an entity extraction graph. rule based not llm based.
+- extends rag rather than replacing it. vector search still does the heavy lifting, DKG adds context on top.
+
+### What are the main contributions and conclusions
+- concept for building a DKG using existing schema to manage document structure and metadata.
+- shows how to integrate the DKG into a rag architecture alongside a vector database.
+- applied to factory planning domain. funded by audi.
+
 
 # 14 - Attention Is All You Need (2019)
 
