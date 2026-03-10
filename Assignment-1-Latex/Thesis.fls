@@ -265,13 +265,13 @@ INPUT ./Chapters/Chapter2.tex
 INPUT ./Chapters/Chapter2.tex
 INPUT ./Chapters/Chapter2.tex
 INPUT Chapters/Chapter2.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT ./Chapters/Chapter3.tex
 INPUT ./Chapters/Chapter3.tex
 INPUT ./Chapters/Chapter3.tex
 INPUT ./Chapters/Chapter3.tex
 INPUT Chapters/Chapter3.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT ./Chapters/Chapter4.tex
 INPUT ./Chapters/Chapter4.tex
 INPUT ./Chapters/Chapter4.tex
