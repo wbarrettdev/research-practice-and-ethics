@@ -1,4 +1,13 @@
-
-
-Retrieval-Augmented Generation is how we dynamically integrate external knowledge in to our agentic systems. LLMs work well on questioning corpuses of data but hallucinate when met with information they are not trained on. RAG is a proven solution to this but only performs well in specific chunk based lookups. RAG fails to at looking at thematic data across an entire corpus. In 2024 graphrag was proposed as a solution to this. GraphRag prebuilds a graph model identifying entities, communities and relationships across an entire corpus. Modern research focuses on the integration of vector or graph rag in isolation. A current gap is that there is little to no research looking at how to integrate both simultaneously. Current research takes an approach of splitting retrieval 50/50 or binary classification of vector or graph-based. The purpose of this research is to build and emperically evaluate routing strategies to address this gap. these straties will analyse incoming queries and determine an adaptive routing strategy that determines the best means of blending the results of both vector and graph based RAG. The contribution of this research will include the development and analysis of multiple classification and blending strategies, combined with an investigation into if adaptive routing out performs indivual retrievaal strategies. 
-
+Retrieval-Augmented Generation (RAG) dynamically integrates external knowledge into Large Language Model (LLM) based systems.  
+LLMs perform well for general tasks but hallucinate when met with information they are not trained on.  
+RAG is a proven solution to this but only performs well in specific chunk-based lookups.  
+RAG fails to identify thematic data across an entire corpus.  
+In 2024 Microsoft introduced a graph-based approach named GraphRAG to address this.  
+Graph-based RAG (GraphRAG) prebuilds a graph model by identifying entities, communities, and relationships across an entire corpus.  
+Most current research focuses on the integration of vector-based or graph-based RAG in isolation.  
+In research where both are combined, the approach is a fixed equal weighting or selection of which to use. 
+A current gap is that when both are combined, there is little to no research adjusting the split based on the incoming query.  
+This means a question about how two entities relate will get treated the same as a fact lookup.  
+The purpose of this research is to build and empirically evaluate routing strategies to address this gap.  
+These strategies will analyze incoming queries and determine the best means of blending the results of both vector and graph-based RAG.  
+The contribution of this research will include the development and analysis of multiple classification and blending strategies, combined with an investigation into if adaptive routing outperforms individual retrieval strategies. 

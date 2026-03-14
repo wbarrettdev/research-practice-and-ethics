@@ -1,12 +1,25 @@
-\chapter{Research Context}
+\chapter{} 
+\section{Research Context} 
 
-With the widespread adoption of large language models (LLMs), whose knowledge is limited to the parametric memory encoded during training, Retrieval-Augmented Generation (RAG)~\cite{lewis2021retrievalaugmentedgenerationknowledgeintensivenlp} has emerged as the predominant approach in enriching model outputs with non-parametric memory from external  sources. Vector RAG encodes documents as chunks in the form of embeddings and retrieves the top k documents via semantic similarity given a query and adds them as context to the LLM for generation. 
+Lewis et al.~\cite{10.5555/3495724.3496517} introduced Retrieval-Augmented Generation (RAG) to enhance large language models (LLMs) with external knowledge through vector based retrieval. Later, Edge et al.~\cite{edge2025localglobalgraphrag} highlighted that vector RAG falls short when it comes to global or sense making queries and proposed a graph based approach called GraphRAG. GraphRAG allows the system to answer global queries like 'what are the main themes in this dataset?'. However, GraphRAG has its own limitations. Graph construction introduces an expensive upfront cost, and for simple query-focused summarization, vector RAG is far more efficient. This highlights the need for hybrid approaches to retrieving knowledge outside of parametric memory. 
 
-While vector RAG achieved state of the art performance in query focused summarization (QFS), Edge et al.~\cite{edge2025localglobalgraphrag} highlighted that it falls short when it comes to global or sense making queries like 'what are the main themes in this dataset?'. They proposed GraphRag as a solution to this problem. GraphRag adopts a graph-based approach to question answering. An LLM is first used to extract entities and relationships from source documents and construct a knowledge graph. Communities are then identified within the graph and summarised, this enables the system to answer global queries. However, GraphRAG has its own limitations. Graph construction introduces an expensive upfront cost, and for simple query-focused summarisation, vector RAG is far more efficient.
+Xu et al.~\cite{Xu_2024} tested this by deploying a hybrid model to production for six months. This hybrid approach was shown to reduce the median per-issue resolution time by 28.6\%. However, their system relies on a fallback approach where they try graph search first and on failure it reverts to vector-based retrieval. There is no means to blend both sources and adjust the balance based on the query.  
 
-This highlights the need for adopting hybrid approaches to extending an LLM's knowledge. Xu et al.~\cite{Xu_2024} tested this by deploying a hybrid model to production for six months. They took the approach of retrieving both vector and graph-based data and merging them in a single context. This hybrid approach was shown to reduce the median per-issue resolution time by 28.6\%. 
+Jeong et al.~\cite{jeong-etal-2024-adaptive} proposed Adaptive RAG which trains a classifier to classify the query and route between no retrieval, single-step, or multi-step retrieval. This outperformed single step retrieval and used half the compute time when performing multi-step approaches; this proves that classifying queries to pick the right strategy improves retrieval quality. However, this works purely against vector-based RAG and does not consider graph retrieval at all.  
 
-Recent works surrounding the area of hybrid approaches include Adaptive RAG proposed by Jeong et al.~\cite{jeong2024adaptiveraglearningadaptretrievalaugmented}. Adaptive RAG trains a classifier to predict the complexity of an incoming query and classify whether to use no retrieval, single-step retrieval, or multi-step iterative retrieval. However, this works purly against vector-based RAG. Guo et al.~\cite{guo2025routeragefficientretrievalaugmentedgeneration} uses reinforcement learning to route between text and grapj retrieval, but the routing is limited to three options; vector, graph or both combined using recipricol rank fusion (RRF)~\cite{10.1145/1571941.1572114}.
+Guo et al.~\cite{guo2025routeragefficientretrievalaugmentedgeneration} used reinforcement learning to fine tune an LLM to route between vector and graph retrieval, but this requires fine tuning the LLM's weights which makes adoptability difficult.  
 
-This research investigates approaches to adpative routing bewteen vector and graph-based retrieval. This includes comparing rule-based, classifer-based and LLM-based methods to determine a weighting system that controls how much prompt space is allocation to each retrival types for a given query. This allows the system to optimize its retrieved context dynamically based on a query rather sticking to fixed retrieval strategies.
+Min et al.~\cite{min2025practicalgraphragefficientknowledge} combined vector and graph retrieval using RRF \cite{10.1145/1571941.1572114} and showed a 15\% improvement over vector-only baselines. However, their system runs both retrieval strategies for every query with a fixed equal weighting. There is no mechanism to skip graph or vector retrieval when the query doesn't need it. 
 
+No current work uses an adaptive balancing approach to blend vector and graph-based retrieval. This research investigates strategies to address this gap and allow better question answering across query types by weighting the retrieval type based on the incoming query.
+
+\section{Research Aim} 
+The aim of this research is to investigate if adaptive, classification-based blending of vector and graph retrieval can  outperform fixed strategies in RAG systems.
+
+\section{Research Objectives}
+\begin{enumerate} 
+    \item To investigate if rule-based, LLM-based and model-based classifiers can determine retrieval weights between vector and graph to provide a lightweight alternative to fine tuning the LLM directly.
+    \item To determine if a weighted blending strategy can outperform fixed retrieval strategies that apply the same retrieval approach regardless of query type. 
+    \item To identify which query characteristics should influence the balance between vector and graph retrieval.
+    \item To determine if a threshold exists to skip a retrieval type entirely, addressing the overhead of running both for every query.
+\end{enumerate}
