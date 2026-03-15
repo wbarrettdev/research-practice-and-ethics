@@ -1,13 +1,13 @@
-Retrieval-Augmented Generation (RAG) dynamically integrates external knowledge into Large Language Model (LLM) based systems.  
+Retrieval-Augmented Generation (RAG) dynamically integrates external knowledge into large language model-based (LLM) systems.  
 LLMs perform well for general tasks but hallucinate when met with information they are not trained on.  
 RAG is a proven solution to this but only performs well in specific chunk-based lookups.  
 RAG fails to identify thematic data across an entire corpus.  
 In 2024 Microsoft introduced a graph-based approach named GraphRAG to address this.  
-Graph-based RAG (GraphRAG) prebuilds a graph model by identifying entities, communities, and relationships across an entire corpus.  
+GraphRAG prebuilds a graph model by identifying entities, communities, and relationships across an entire corpus.  
 Most current research focuses on the integration of vector-based or graph-based RAG in isolation.  
 In research where both are combined, the approach is a fixed equal weighting or selection of which to use. 
 A current gap is that when both are combined, there is little to no research adjusting the split based on the incoming query.  
 This means a question about how two entities relate will get treated the same as a fact lookup.  
-The purpose of this research is to build and empirically evaluate routing strategies to address this gap.  
+The purpose of this research is to build and evaluate blending strategies to address this gap.  
 These strategies will analyze incoming queries and determine the best means of blending the results of both vector and graph-based RAG.  
-The contribution of this research will include the development and analysis of multiple classification and blending strategies, combined with an investigation into if adaptive routing outperforms individual retrieval strategies. 
+The contribution of this research will include an investigation into multiple classification and blending strategies, combined with an investigation into if adaptive routing outperforms individual retrieval strategies. 
